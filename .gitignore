@@ -1,0 +1,8 @@
+*~
+node_modules
+coverage
+.DS_STORE
+.env
+npm-debug.log
+build
+savedBookmarks.json
