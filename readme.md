@@ -19,8 +19,15 @@ const serverRoot = 'http://localhost:3000';
 // add bookmark for current page URL
 const bookmarkUrlToSave = window.location.href;
 const bookmarkNameToSave = document.title;
-const saveBookmarkUrl = `${serverRoot}/save?url=${encodeURIComponent(bookmarkUrlToSave)}&name=${encodeURIComponent(bookmarkNameToSave)}`;
+const saveBookmarkUrl = `${serverRoot}/save/?url=${encodeURIComponent(bookmarkUrlToSave)}&name=${encodeURIComponent(bookmarkNameToSave)}`;
 
-fetch(saveBookmarkUrl);
+// NOTE: fallback exists because some sites do not allow cross-origin requests
+fetch(saveBookmarkUrl)
+  .then(() => {
+    alert('Bookmark Saved 👍');
+  })
+  .catch(() => {
+    window.open(saveBookmarkUrl, '_blank');
+  });
 ```
 Make the aforementioned code into a bookmarklet [here](https://caiorss.github.io/bookmarklet-maker/).
