@@ -1,3 +1,11 @@
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #333;
+    color: white;
+  }
+  a { filter: hue-rotate(13deg) brightness(200%); }
+}
+
 .no-bookmarks {
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
