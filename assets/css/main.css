@@ -6,7 +6,7 @@
   a:visited { color: fuchsia; }
   a { color: deepskyblue; }
   
-  table tbody tr:nth-child(odd) { background-color: #222; }
+  table tbody tr:nth-child(odd) { background-color: #222 !important; }
 }
 
 .no-bookmarks {
