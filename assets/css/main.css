@@ -3,7 +3,10 @@
     background: #333;
     color: white;
   }
-  a { filter: hue-rotate(13deg) brightness(200%); }
+  a:visited { color: fuchsia; }
+  a { color: deepskyblue; }
+  
+  table tbody tr:nth-child(odd) { background-color: #222; }
 }
 
 .no-bookmarks {
